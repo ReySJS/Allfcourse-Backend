@@ -1,0 +1,103 @@
+25 de agosto:
+    - Estrutura montada e projeto iniciado
+
+25~26 de agosto:
+    - Sistema de registro criado
+    - Adicionado eslint
+    - Arquitetura melhorada
+    - Adicionado confirmação de criação de conta por token com validade
+    - Adicionado rota para gerar um novo token de confirmação de conta, caso o antigo tenha expirado
+    - Adicionado sistema de login e logout
+
+27 de agosto:
+    - Arquitetura melhorada
+    - Validações adicionadas e antigas melhoradas
+    - Corrigido bugs menores
+    - Melhorando middleware de autenticação
+    - Logs melhorados
+    - Consultas no bd dividas entre: comuns(sem begin transaction) e de alto fluxo(com begin transaction) em 2 arquivos distintos
+    - Schemas do SQL Adicionado
+
+28 de agosto:
+    - Rotas get adicionadas
+    - Fix de bugs menores
+
+29 de agosto:
+    - Arquitetura melhorada
+    - Rota de adição de curso melhorada
+    - Adicionado logs especificos para o JWT
+    - Configuração do ESLint ajustada
+    - Login e logout fixados
+    - Middlewares melhorados
+    - Adicionado parcialmente rotas de delete
+    - Fixado vários bugs na rota de compra de cursos e adição de novo curso
+    - Validadores melhorados
+    - Schema do SQL atualizado
+    - Adicionado rota para validar um curso
+    - Adicionado coluna "deleted_by" na modules
+    - Consoles.logs e comentários antigos/irrelevantes removidos
+
+30 de agosto:
+    - Correção de bugs na Query
+    - Adição da rota de get courses/flag/:id
+    - Adição da rota de get modules/course/:id
+    - Adição da rota get payment-methods/:id
+    - Adição da rota get sales/course/:id
+    - Adiçao da rota get financial-transfer/teacher/:id
+    - Adição da rota de get receive-bills/:id
+    - Adição da rota de get receive-bills/sale/:id
+    - Adição da tota de get sales/:id
+    - Adição da rota get sales/student/:id
+    - Adição da rota get courses/logged-teacher
+    - Adição da rota de delete classes/:id
+    - Adição da rota de delete payment-method/:id
+    - Adição da rota de get courses/logged-user
+    - Adição da rota de delete enroll-student/:id
+    - Adição da rota: "checkpasstoken", seu controller: "checkResetPassToken.controller" e sua função de validação:
+    "checkResetPassTokenOnly". Verifica a validade do token para recuperação de senha isoladamente antes
+    de fazer nova requisição enviando a nova senha.
+
+31 de agosto:
+    - Adição da rota de delete course-flag/:courseid/:categoryid
+    - Adicionado rota de atualizar categoria
+    - Adicionado rota de atualizar foto de perfil
+    - Adicionado rota de atualizar Metódo de pagamento
+    - Alguns bugs corrigidos
+    - Adicionado pasta de fotos de perfil
+    - Corrigido bugs de validação
+    - Adicionado validação no número de telefone
+    - Adicionado lib "express-fileupload"
+    - Adicionado rota /static para acesso as fotos de perfil no front-end
+    - SQL scheme atualizado
+    - Adição da rota de put update-userdata
+    - Sugestão de melhorias nos arquivos referente à rota de registro de usuários
+    - Adição da rota para atualizar senha do usuário
+    - Adicionado link da foto do usuário no jwt
+    - Corrigido types em algumas rotas
+    - Corrigido bug na rota /updatephoto
+    - Usuário agora por padrão vem com a foto "default.png"
+    - Atualizando para camelCase todas os valores recebidos no req.body
+    - Corrigido bug que não setava os cookies no browser do usuário
+
+01 de setembro:
+    - Adição da rota de get course-informations
+    - Adição de retorno de categorias do curso na rota get courses by logged user
+    - Adicionado host como opção na index da config
+    - Arrumado pequeno bug no update de foto e cadastro
+    - Rota estática de fotos de usuário mudada para /profilephoto/user-${userid}
+    - Rota estática de banners de curso definida para /coursebanners/coursebanner-${teacherid}
+    - Adicionado rota /updatecourse/:id
+    - Adicionado rota /updatemodule/:id
+    - Adicionado rota /updatecoursebanner/:id
+    - Bugs menores corrigidos
+    - Consertado nome de "checkIdCategoryExists" para "CheckIfCategoryExists"
+    - Adicionado validadores para os update
+    - Pasta banners criada
+    - Pasta avatars criada
+    - Restaurado backup de "addModule.controller.js" e "addClass.controller.js"
+    - Porta alterada definitivamente para 3001
+    - Adicionado reordenação sequencial quando deletar um módulo
+    - Adicionado reordenação sequencial quando deletar uma aula
+    - Adição da rota de update class
+    - Atualização do método de Update da Query
+    - Atualização das rotas que utilizam o método de Update da Query

@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": [
+        "*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@controller/*": [
+        "controllers/*"
+      ],
+      "@functions/*": [
+        "functions/*"
+      ],
+      "@helpers/*": [
+        "helpers/*"
+      ],
+      "@logs/*": [
+        "logs/*"
+      ],
+      "@middlewares/*": [
+        "middlewares/*"
+      ],
+      "@model/*": [
+        "model/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@templates/*": [
+        "templates/*"
+      ],
+      "@validations/*": [
+        "validations/*"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules/",
+    "dist/"
+  ]
+}
