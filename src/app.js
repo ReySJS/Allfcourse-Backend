@@ -46,6 +46,7 @@ app.use(sendError);
 app.use('/avatars', express.static(`${__dirname}/avatars`));
 app.use('/coursebanners', express.static(`${__dirname}/banners`));
 app.use(fileUpload());
+
 app.use(
     morgan(
         `:method :url :response-time ms\nDATE: ${new Date().toLocaleDateString(
